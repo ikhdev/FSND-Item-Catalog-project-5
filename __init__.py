@@ -217,12 +217,6 @@ def gdisconnect():
         return response
 
 
-engine = create_engine('sqlite:///item_catalog.db?check_same_thread=False')
-Base.metadata.bind = engine
-
-DBSession = sessionmaker(bind=engine)
-session = DBSession()
-
 
 # Display all categories
 @app.route('/')
